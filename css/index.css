@@ -6,7 +6,6 @@ PRE-CONFIG
 	padding: 0;
 	box-sizing: 'border-box';
 	font-family: 'Roboto', sans-serif;
-	overflow-x: hidden;
 }
 
 .container {
@@ -81,6 +80,7 @@ PROJECTS
 	display: flex;
 	flex-flow: column wrap;
 	background: #E8E8E8;
+	overflow-x: hidden;
 }
 
 /*
