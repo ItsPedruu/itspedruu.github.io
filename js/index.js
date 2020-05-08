@@ -11,13 +11,16 @@ async function displayProjects() {
 	for (const project of projects) {
 		data.push(`
 			<div class="project">
-				<a href="${project.link}" target="_blank"><h2>${project.title}</h2></a>
-				<p>${project.description}</p>
-
-				<div class="technologies">
-					${project.technologies.map(technology => `<span>${technology}</span>`).join('\n')}
+				<div class="project-header">
+					<h1><a href="${project.link}" target="blank">${project.title}</a></h1>
 				</div>
-				<div class="thumbnail">
+				<div class="project-description">
+					<p>${project.description}</p>
+				</div>
+				<div class="project-tags">
+					${project.technologies.map(tag => `<div class="project-tag"><span>${tag}</span></div>`).join('\n')}
+				</div>
+				<div class="project-thumbnail">
 					<img src="assets/images/${project.imageId}.png">
 				</div>
 			</div>

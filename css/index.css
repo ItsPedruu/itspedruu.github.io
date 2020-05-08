@@ -1,0 +1,203 @@
+/*
+PRE-CONFIG
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: 'border-box';
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-flow: column wrap;
+	height: 100%;
+}
+
+/*
+ABOUT
+*/
+.about {
+	width: 98%;
+	height: 35%;
+	padding: 1%;
+	background: #3E4453;
+	color: white;
+	position: relative;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+/*
+ABOUT - HEADER
+*/
+.about-header {
+	width: 100%;
+	text-align: center;
+	height: 30%;
+}
+
+.about-header h1 {
+	font-family: 'Pacifico', sans-serif;
+}
+
+.about-description {
+	width: 100%;
+	height: 50%;
+	text-align: center;
+}
+
+.about-description p {
+	position: relative;
+	margin-top: 10px;
+}
+
+/*
+ABOUT - SOCIAL MEDIA
+*/
+.about-social-media {
+	width: 98%;
+	text-align: center;
+	padding: 1%;
+	height: 15%;
+}
+
+.about-social-media a {
+	color: rgba(255, 255, 255, .7);
+	font-size: 25px;
+	transition: color .6s;
+	margin: 1%;
+}
+
+.about-social-media a:hover {
+	color: white;
+}
+
+/*
+PROJECTS
+*/
+.projects {
+	width: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	background: #E8E8E8;
+}
+
+/*
+PROJECT
+*/
+.project {
+	width: 100%;
+	height: 40%;
+	background: #E8E8E8;
+}
+
+/*
+PROJECT - HEADER
+*/
+.project-header {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+	height: 10%;
+}
+
+.project-header a {
+	color: rgb(51, 51, 51);
+	font-size: 22px;
+	text-decoration: none;
+}
+
+/*
+PROJECT - DESCRIPTION
+*/
+.project-description {
+	width: 100%;
+	height: 40%;
+	padding: 10px 0;
+	text-align: center;
+}
+
+/*
+PROJECT - TAGS
+*/
+.project-tags {
+	width: 100%;
+	padding: 10px 0;
+}
+
+.project-tag {
+	margin: 10px;
+	background: #3E4453;
+	width: 100px;
+	text-align: center;
+	padding: 10px 0;
+	margin: 1%;
+	color: white;
+	display: inline-block;
+}
+
+/*
+PROJECT - THUMBNAIL
+*/
+.project-thumbnail {
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	padding: 10px 0;
+}
+
+hr {
+	width: 100%;
+}
+
+@media screen and (min-width: 864px) {
+	.container {
+		flex-flow: row wrap;
+	}	
+	
+	.about {
+		width: 28%;
+		height: calc(100% - 10px);
+		padding: 5px;
+	}
+
+	.projects {
+		width: calc(72% - 10px);
+		flex-flow: row wrap;
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	.project {
+		height: 30%;
+		width: 100%;
+	}
+
+	.project-header {
+		width: 60%;
+		padding: 5px;
+		text-align: left;
+	}
+
+	.project-description {
+		height: 20%;
+		text-align: left;
+		padding: 5px;
+	}
+
+	.project-tags {
+		padding: 0;
+	}
+}
+
+@media screen and (min-width: 1275px) {
+	.about {
+		width: calc(20% - 10px);
+	}
+
+	.projects {
+		width: 80%;;
+	}
+}
