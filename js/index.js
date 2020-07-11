@@ -1,14 +1,8 @@
-async function getProjects() {
-	const res = await fetch('./assets/data/projects.json');
-	return res.json();
-}
-
 async function displayProjects() {
-	const projects = await getProjects();
 	const element = document.getElementsByClassName('projects')[0];
 	const data = [];
 
-	for (const project of projects) {
+	for (const project of PROJECTS) {
 		data.push(`
 			<div class="project">
 				<div class="project-header">
@@ -21,7 +15,7 @@ async function displayProjects() {
 					${project.technologies.map(tag => `<div class="project-tag"><span>${tag}</span></div>`).join('\n')}
 				</div>
 				<div class="project-thumbnail">
-					<img src="assets/images/${project.imageId}.png">
+					<img src="assets/${project.imageId}.png">
 				</div>
 			</div>
 		`);
